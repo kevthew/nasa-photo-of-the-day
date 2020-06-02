@@ -1,18 +1,19 @@
 import React from "react";
+import {Card, CardImg, CardText} from '../../../node_modules/reactstrap/'
 
 function MainContent(props) {
     console.log(props.dataArray)
     return(
-        <div>
+        <Card>
             <div>
-                <img 
+                <CardImg 
                     alt='astronmy photo'
                     className='NasaImg'
                     src={props.dataArray.url}
                     />
             </div>
-           <p>{props.dataArray.explanation}</p>
-        </div>
+           <CardText>{props.dataArray.explanation}</CardText>
+        </Card>
     )
 }
 

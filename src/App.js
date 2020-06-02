@@ -3,7 +3,7 @@ import "./App.css";
 import axios from 'axios';
 import Title from './components/title/title'
 import MainContent from "./components/mainData/mainData";
-
+import {Container} from '../node_modules/reactstrap'
 
  
 function App() {
@@ -21,11 +21,13 @@ function App() {
   console.log(data, 'this is data app')
 
   return (
-    <div className="App">
-      <h1 className='header'>NASA: Astronomy Picture of the Day</h1>
-      <Title titleArray = {data}/>
-      <MainContent dataArray = {data}/>
-    </div>
+    <Container>
+      <div className="App">
+        <h1 className='header'>NASA: Astronomy Picture of the Day</h1>
+        <Title titleArray = {data}/>
+        <MainContent dataArray = {data}/>
+      </div>
+    </Container>
   );
 }
 

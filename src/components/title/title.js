@@ -1,11 +1,12 @@
 import React from "react";
+import {Card, CardTitle} from '../../../node_modules/reactstrap/'
 
 function Title(props) {
     console.log(props.titleArray.title)
     return(
-        <div>
-            <h2>{props.titleArray.title}</h2>
-        </div>
+        <Card>
+            <CardTitle>{props.titleArray.title}</CardTitle>
+        </Card>
     )
 }
 
